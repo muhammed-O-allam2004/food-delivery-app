@@ -1,0 +1,110 @@
+.login-popup {
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: grid;
+    place-items: center;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(2px);
+}
+
+.login-popup-container {
+    width: max(23vw, 330px);
+    color: #808080;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 30px;
+    border-radius: 15px;
+    font-size: 14px;
+    animation: fadeIn 0.5s;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+}
+
+.login-popup-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+
+.login-popup-title h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.login-popup-title img {
+    width: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-popup-title img:hover {
+    transform: scale(1.2);
+}
+
+.login-popup-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-popup-inputs input {
+    outline: none;
+    border: 1px solid #c9c9c9;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: 'Cairo', sans-serif;
+}
+
+.login-popup-inputs input:focus {
+    border-color: tomato;
+}
+
+.login-popup-container button {
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    color: white;
+    background-color: tomato;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Cairo', sans-serif;
+}
+
+.login-popup-container button:hover {
+    background-color: #ff3300;
+}
+
+.login-popup-condition {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    margin-top: -10px;
+}
+
+.login-popup-condition input {
+    margin-top: 5px;
+    accent-color: tomato;
+}
+
+.login-popup-condition p {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.login-popup p span {
+    color: tomato;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+}

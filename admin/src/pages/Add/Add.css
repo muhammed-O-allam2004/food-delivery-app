@@ -1,0 +1,171 @@
+.add {
+    width: 70%;
+    margin-left: max(5vw, 25px);
+    margin-top: 50px;
+    color: #6d6d6d;
+    font-size: 18px; /* ✅ تكبير الخط العام للصفحة */
+}
+
+.add form {
+    gap: 25px; /* مسافة أكبر شوية بين العناصر */
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* تكبير عناوين الحقول */
+.flex-col p {
+    font-size: 18px; /* ✅ تكبير عناوين الحقول */
+    font-weight: 600; /* خط أتقل شوية للوضوح */
+    color: #333; /* لون أغمق للقراءة المريحة */
+}
+
+.add-img-upload img {
+    width: 140px; /* تكبير بسيط لمنطقة الصورة */
+}
+
+.add-product-name, .add-product-description {
+    width: max(40%, 350px); /* توسيع عرض الحقل شوية */
+}
+
+/* ✅ أهم تعديل: تكبير خط الكتابة داخل الخانات */
+.add-product-name input, 
+.add-product-description textarea, 
+.add-category select, 
+.add-price input,
+.add-includes input { /* ضفت تنسيق includes هنا */
+    padding: 15px; /* مساحة داخلية أكبر للكتابة */
+    font-size: 18px; /* ✅ تكبير الخط اللي بتكتبه */
+    font-family: 'Outfit', sans-serif; /* توحيد الخط */
+    border: 1px solid #c5c5c5;
+    border-radius: 6px;
+}
+
+.add-category-price {
+    display: flex;
+    gap: 40px;
+}
+
+.add-category, .add-price {
+    gap: 12px;
+}
+
+.add-category select, .add-price input, .serving-select {
+    max-width: 150px; /* تكبير عرض القوائم */
+    padding: 12px;
+    font-size: 16px;
+}
+
+.serving-select {
+    width: 100%;
+    max-width: 450px !important;
+    padding: 12px;
+    border: 1px solid #c5c5c5;
+    font-size: 16px;
+}
+
+/* --- تنسيق قسم خيارات التقديم الجديد --- */
+.add-serving-section {
+    background-color: #fcfcfc;
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.section-title {
+    font-weight: bold;
+    color: tomato;
+    margin-bottom: 20px;
+    font-size: 20px; /* ✅ تكبير عنوان القسم */
+    border-bottom: 2px solid #ffefe8;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.variants-container {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+/* شكل الزرار (Chip) */
+.variant-item {
+    padding: 10px 20px; /* تكبير مساحة الزرار */
+    border: 1px solid #dcdcdc;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: white;
+    color: #555;
+    font-weight: 600; /* خط أوضح */
+    font-size: 16px; /* ✅ تكبير كلام الخيارات */
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.variant-item:hover {
+    background-color: #f0f0f0;
+    border-color: #b0b0b0;
+}
+
+.variant-item.active {
+    background-color: #ff4c24;
+    color: white;
+    border-color: #ff4c24;
+    font-weight: bold;
+    box-shadow: 0 3px 8px rgba(255, 76, 36, 0.3);
+}
+
+/* --- تنسيق قسم العروض --- */
+.add-offer-section {
+    margin-top: 15px;
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+
+.offer-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.offer-checkbox input {
+    width: 24px; /* تكبير الـ Checkbox */
+    height: 24px;
+    accent-color: tomato;
+    cursor: pointer;
+}
+
+.offer-checkbox label {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px; /* ✅ تكبير الخط */
+}
+
+.final-price-display h3 {
+    color: tomato;
+    margin-top: 8px;
+    font-size: 24px; /* ✅ تكبير رقم السعر النهائي */
+}
+
+.add-btn {
+    max-width: 200px;
+    border: none;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 18px; /* ✅ تكبير زر الإضافة */
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+.add-btn:hover {
+    background-color: #333;
+}

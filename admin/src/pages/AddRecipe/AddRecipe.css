@@ -1,0 +1,92 @@
+.add-recipe {
+    width: 70%;
+    margin-left: max(5vw, 25px);
+    margin-top: 50px;
+    color: #6d6d6d;
+    font-size: 16px;
+}
+
+.add-recipe form {
+    gap: 20px;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* تكبير الخطوط زي ما اتفقنا */
+.add-recipe input, .add-recipe textarea, .add-recipe select {
+    padding: 10px;
+    border: 1px solid #c5c5c5;
+    border-radius: 4px;
+    font-size: 16px; 
+}
+
+.upload-area {
+    width: 120px;
+    cursor: pointer;
+}
+
+/* تنسيق جدول المكونات */
+.ingredients-section {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.ingredient-inputs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.ingredient-inputs input {
+    flex: 1; /* عشان يتوزعوا بالتساوي */
+}
+
+.add-ing-btn {
+    background-color: tomato;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.ingredients-list {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.ing-item {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.remove-ing {
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.add-btn {
+    max-width: 150px;
+    border: none;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-top: 20px;
+}

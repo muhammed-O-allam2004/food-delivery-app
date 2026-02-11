@@ -1,0 +1,134 @@
+.place-order {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 50px;
+    margin: 100px 0px;
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+}
+
+.place-order-left {
+    width: 100%;
+    max-width: max(30%, 500px);
+}
+
+.place-order-left .title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.place-order-left input {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c5c5c5;
+    border-radius: 4px;
+    outline-color: #ff4c24;
+    font-size: 16px;
+}
+
+.place-order-left .multi-field {
+    display: flex;
+    gap: 10px;
+}
+
+.place-order-right {
+    width: 100%;
+    max-width: max(40%, 500px);
+}
+
+.cart-total {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-total h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+}
+
+.cart-total hr {
+    margin: 10px 0;
+    height: 1px;
+    background-color: #e2e2e2;
+    border: none;
+}
+
+.place-order-submit {
+    margin-top: 50px;
+    border: none;
+    background-color: #ff4c24;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.place-order-submit:hover {
+    background-color: #e03a15;
+}
+
+.payment {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+}
+
+.payment h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+}
+
+.payment .payment-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.payment .payment-option p {
+    font-weight: 500;
+    color: #444;
+    margin: 0;
+}
+
+.payment .payment-option:hover {
+    background-color: #fff4f2;
+    border-color: #ff4c24;
+}
+
+.payment .payment-option img {
+    width: 20px;
+}
+
+@media (max-width: 700px) {
+    .place-order {
+        flex-direction: column;
+    }
+}

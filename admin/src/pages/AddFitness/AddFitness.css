@@ -1,0 +1,37 @@
+.add-fitness {
+    width: 70%;
+    margin-left: max(5vw, 25px);
+    margin-top: 50px;
+    color: #6d6d6d;
+    font-size: 16px;
+}
+.add-fitness form {
+    gap: 20px;
+}
+.add-fitness .add-img-upload img {
+    width: 120px;
+    cursor: pointer;
+}
+.add-fitness input, .add-fitness textarea, .add-fitness select {
+    padding: 10px;
+    border: 1px solid #a9a9a9;
+    border-radius: 4px;
+    outline: none;
+}
+.add-category-price {
+    display: flex;
+    gap: 30px;
+}
+.add-category-price .flex-col {
+    flex: 1; 
+}
+.add-btn {
+    max-width: 150px;
+    border: none;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 15px;
+}

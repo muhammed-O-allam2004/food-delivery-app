@@ -1,0 +1,137 @@
+.recipe-details {
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    gap: 50px;
+    animation: fadeIn 0.5s;
+}
+
+/* الجزء اليمين (الصورة والفيديو) */
+.recipe-left {
+    flex: 1;
+}
+
+.recipe-img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #000;
+    margin-top: 20px;
+    border: 2px solid #ff4c24;
+    min-height: 300px;
+}
+
+.recipe-video {
+    width: 100%;
+    display: block;
+    min-height: 300px;
+}
+
+/* الجزء الشمال */
+.recipe-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.recipe-name {
+    font-size: 30px;
+    font-weight: 700;
+    color: #262626;
+}
+
+.recipe-desc {
+    color: #676767;
+    line-height: 1.6;
+}
+
+.ingredients-box {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+}
+
+.ingredients-box h3 {
+    margin-bottom: 15px;
+    color: #ff4c24;
+}
+
+.ingredients-list {
+    list-style: none;
+    padding: 0;
+}
+
+.ingredients-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+/* ✅✅ تنسيق الجزء الجديد: خطوات التحضير */
+.steps-box {
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    box-shadow: 0px 2px 8px #0000000d;
+}
+
+.steps-box h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+    font-size: 20px;
+}
+
+.steps-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 10px;
+    background-color: #f8f8f8;
+    padding: 12px;
+    border-radius: 8px;
+    border-right: 4px solid #ff4c24; /* نفس لون الثيم */
+}
+/* ------------------------------------- */
+
+.action-buttons {
+    margin-top: auto;
+    display: flex;
+    gap: 20px;
+}
+
+.buy-box-btn {
+    flex: 1;
+    padding: 15px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.buy-box-btn:hover {
+    background: #333;
+}
+
+@media (max-width: 750px) {
+    .recipe-details {
+        flex-direction: column;
+        width: 90%;
+    }
+}

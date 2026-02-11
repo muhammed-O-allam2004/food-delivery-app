@@ -1,0 +1,110 @@
+.my-orders {
+    margin: 50px 0px;
+    padding: 0 20px; /* هوامش عشان الموبايل */
+}
+
+.my-orders h2 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #262626;
+    margin-bottom: 30px;
+}
+
+.my-orders .container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* تصميم الكارت نفسه */
+.my-orders-order {
+    display: grid;
+    grid-template-columns: 0.5fr 2.5fr 1fr 1fr 1.5fr 1.5fr; /* تقسيم الأعمدة بذكاء */
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+    padding: 25px; /* مساحة داخلية مريحة */
+    color: #454545;
+    background-color: #fff; /* خلفية بيضاء */
+    border: 1px solid #e2e2e2; /* حدود رمادية خفيفة جداً */
+    border-radius: 15px; /* حواف دائرية */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.04); /* ضل ناعم */
+    transition: 0.3s ease; /* نعومة في الحركة */
+}
+
+/* تأثير لما الماوس ييجي على الكارت */
+.my-orders-order:hover {
+    transform: translateY(-5px); /* الكارت يرتفع لفوق */
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: #ff4c24; /* الحدود تحمر خفيف */
+}
+
+.my-orders-order img {
+    width: 50px;
+    opacity: 0.8; /* شفافية بسيطة للأيقونة */
+}
+
+.order-items-names {
+    color: #333;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.order-price {
+    font-weight: 700;
+    color: #ff4c24; /* لون السعر مميز */
+    font-size: 16px;
+}
+
+.order-status span {
+    color: #ff4c24; /* نقطة الحالة حمراء */
+    font-size: 20px; /* تكبير النقطة */
+}
+
+.order-status b {
+    font-weight: 600;
+    color: #454545;
+}
+
+/* زرار التتبع الشيك */
+.my-orders button {
+    border: none;
+    padding: 12px 0px;
+    border-radius: 8px; /* حواف دائرية للزر */
+    background-color: #ffe8e4; /* خلفية حمراء فاتحة */
+    cursor: pointer;
+    color: #ff4c24;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.my-orders button:hover {
+    background-color: #ff4c24; /* يتحول للأحمر الغامق عند الضغط */
+    color: white;
+}
+
+/* التجاوب مع الموبايل (Responsive) */
+@media (max-width: 900px) {
+    .my-orders-order {
+        grid-template-columns: 1fr 2fr; /* عمودين بس في الموبايل */
+        gap: 15px;
+        padding: 15px;
+    }
+
+    /* بعض العناصر تاخد السطر كله في الموبايل */
+    .order-items-names, 
+    .order-status,
+    .track-btn {
+        grid-column: 1 / 3; /* ياخد عرض العمودين */
+    }
+
+    .order-icon {
+        display: none; /* نخفي الأيقونة في الموبايل توفيراً للمساحة */
+    }
+    
+    .my-orders-order button {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+}

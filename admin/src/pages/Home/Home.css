@@ -1,0 +1,56 @@
+.home-panel {
+    width: 70%;
+    margin-top: 50px;
+    margin-left: 25px; /* أو right حسب اتجاه الموقع */
+}
+
+.home-panel h1 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: 0.3s;
+    border: 1px solid #eee;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card-info h3 {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.card-info p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
