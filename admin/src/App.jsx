@@ -15,7 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
 
-  const url = "http://localhost:4000"; 
+  const url = "https://food-delivery-app-production-4da8.up.railway.app"; 
 
   return (
     <div className='app'>
