@@ -7,7 +7,6 @@ const askAI = async (req, res) => {
     try {
         const apiKey = process.env.GEMINI_API_KEY;
         
-        // 1. اختيار الموديل
         const modelsListResponse = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`);
         const modelsData = await modelsListResponse.json();
         
@@ -20,22 +19,18 @@ const askAI = async (req, res) => {
             if (foundModel) validModel = foundModel.name;
         }
 
-        // 2. تجميع البيانات
         const foods = await foodModel.find({});
         const fitnessFoods = await fitnessModel.find({}); 
         const recipes = await recipeModel.find({});       
 
-        // تجهيز النصوص
         const menuContext = foods.filter(f => !f.offer).map(f => `${f.name} (${f.price} EGP)`).join(", ");
         
-        // حساب السعر بعد الخصم للفيتنس
         const fitnessContext = fitnessFoods.map(f => {
             let priceText = `${f.price} EGP`;
             if (f.discount > 0) {
                 const newPrice = f.price - (f.price * f.discount / 100);
                 priceText = `(سعر لقطة! ${newPrice} EGP بدلاً من ${f.price} EGP - خصم ${f.discount}%)`;
             }
-            // ✅ التصنيف ده [تخسيس] أو [عضلات] هو اللي الـ AI هيستخدمه للفلترة
             return `${f.name} [تصنيف: ${f.category === 'Diet' ? 'تخسيس' : 'عضلات'}] ${priceText}`;
         }).join(", ");
 
@@ -45,7 +40,6 @@ const askAI = async (req, res) => {
 
         const promoInfo = "كود الخصم الحالي هو 'BIG20'. بيخصم 20% للطلبات فوق 1000 جنيه (متاح مرة كل 6 شهور).";
 
-        // 3. التعليمات الذكية (تم تحديث قواعد الاقتراح)
         const systemInstruction = `
         أنت مساعد ذكي لمطعم Yummy.
         

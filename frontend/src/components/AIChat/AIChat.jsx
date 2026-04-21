@@ -32,19 +32,15 @@ const AIChat = () => {
             if (response.data.success) {
                 let aiReply = response.data.data;
                 
-                // دالة مساعدة للتعامل مع التوجيه
                 const handleRedirect = (keyword, path) => {
-                    // ✅ 1. بنشيل كلمة التوجيه من النص عشان نعرض الرد النظيف
                     const cleanText = aiReply.replace(keyword, "").trim();
-                    // ✅ 2. لو فيه رد (زي اسم الكود) بنعرضه، لو مفيش بنحط رسالة افتراضية
                     const finalText = cleanText || "تمام، بحولك للصفحة حالاً... 🚀";
                     
                     setMessages(prev => [...prev, { role: 'ai', text: finalText }]);
                     
-                    // ✅ 3. ننتظر ثانيتين عشان العميل يقرأ الرد، وبعدين نحول
                     setTimeout(() => { 
                         navigate(path); 
-                        if(path !== '/offers') setIsOpen(false); // نسيب الشات مفتوح في العروض بس، ونقفله في الباقي
+                        if(path !== '/offers') setIsOpen(false);
                     }, 2000);
                 };
 
@@ -53,7 +49,6 @@ const AIChat = () => {
                 else if (aiReply.includes("REDIRECT_TO_DIY")) handleRedirect("REDIRECT_TO_DIY", "/diy-recipes");
                 else if (aiReply.includes("REDIRECT_TO_MENU")) handleRedirect("REDIRECT_TO_MENU", "/");
                 else {
-                    // رد عادي مفيهوش توجيه (زي لما يجاوب بالكود بس)
                     setMessages(prev => [...prev, { role: 'ai', text: aiReply }]);
                 }
 
