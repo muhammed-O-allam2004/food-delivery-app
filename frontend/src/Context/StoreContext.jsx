@@ -6,7 +6,7 @@ export const StoreContext = createContext(null);
 const StoreContextProvider = (props) => {
 
     const [cartItems, setCartItems] = useState({});
-    const url = "https://food-delivery-app-production-4da8.up.railway.app"; 
+    const url = "http://localhost:4000"; 
     const [token, setToken] = useState("");
     const [food_list, setFood_list] = useState([]);
     const [fitness_list, setFitness_list] = useState([]); 
